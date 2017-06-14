@@ -1,0 +1,39 @@
+ion-content.background {
+  background: url('../assets/bg1.jpg');
+  background-size: contain;
+}
+ion-content.logo {
+  background: url('../assets/inovia.png');
+  background-size: contain;
+}
+
+.toolbar-background-ios {
+  background: transparent;
+}
+
+.signup_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: -50px;
+}
+
+.input{
+  background: rgb(153,151,154);
+  color: #fff;
+}
+.item{
+  background: rgb(153,151,154);
+  color: #fff;
+}
+.logo{
+  float: left;
+    width: 120px;
+    height: 120px;
+    background: url(../assets/inovia.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+}
