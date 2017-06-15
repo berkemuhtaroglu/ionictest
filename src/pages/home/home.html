@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="auth">
-      <ion-segment-button value="login">
+      <ion-segment-button  value="login">
         Login
       </ion-segment-button>
       <ion-segment-button value="signUp">
@@ -10,9 +10,11 @@
     </ion-segment>
   </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content class="signup_body">
-  <div [ngSwitch]="auth">
+  <ion-card>
+  <div [ngSwitch]="auth" class="wrap">
+
     <div class="logo" ></div>
     <form (ngSubmit)="logIn()" *ngSwitchDefault>
       <ion-item>
@@ -25,7 +27,7 @@
  	      <ion-input type="password" [(ngModel)]="user.pass" name="pass"></ion-input>
       </ion-item>
 
-      <div padding>
+      <div>
         <button ion-button color="primary" block   type="submit">Login</button>
         <!--<button ion-button color="primary" block *ngSwitchCase="'signUp'" type="submit">Sign Up</button>-->
       </div>
@@ -48,11 +50,11 @@
  	      <ion-input type="password" [(ngModel)]="user.pass" name="pass"></ion-input>
       </ion-item>
 
-      <div padding>
+      <div>
         <button ion-button color="primary" block type="submit">Sign Up</button>
       </div>
     </form>
   </div>
-
-	<button ion-button (click)="nextPage()">NEXT</button>
+  	<button ion-button (click)="nextPage()" color="primary" block type="submit">Next</button>
+	</ion-card>
 </ion-content>

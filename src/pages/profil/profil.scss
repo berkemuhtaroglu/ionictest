@@ -1,14 +1,20 @@
 page-profil {
-    ion-content.background {
-  background: url('../assets/bg1.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.item{
-  background: rgb(153,151,154);
-  color: #fff;
-}
-ion-label.label{
+  ion-content.background {
+    background: url('../assets/bg1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .scroll-content{
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      margin-bottom: 300px
+  }
+  .item{
+    background: rgb(153,151,154);
+    color: #fff;
+  }
+  ion-label.label{
     color: #fff !important;
   }
 }

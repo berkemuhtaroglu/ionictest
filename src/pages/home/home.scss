@@ -3,6 +3,14 @@ page-home {
   background-size: contain;
   ion-label.label{
     color: #fff !important;
+ 
+ .scroll-content{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: -5px;
+}
+}
   }
   .logo{
   float: left;
@@ -12,10 +20,13 @@ page-home {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
-    
-
 }
+
+.scroll-content{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: -5px;
 }
 ion-content.logo {
   background: url('../assets/inovia.png');
@@ -38,11 +49,21 @@ ion-content.logo {
   background: rgb(153,151,154);
   color: #fff; 
 }
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+ion-card{
+  background: rgba(0,0,0,.5) !important;
+  
+}
 
 .item{
   background: rgb(153,151,154);
   color: #fff;
+  margin-bottom: 10px;
 }
+
 .logo{
   float: center;
   display:flex;
