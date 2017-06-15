@@ -8,6 +8,12 @@ import { Page2Page } from '../page2/page2';
   templateUrl: 'home.html'
 })
 export class HomePage {
+    user = {
+    email: '',
+    pass: '',
+    Firstname:'',
+    Surname:''
+  }
 
   constructor(public navCtrl: NavController) {
 
@@ -16,6 +22,11 @@ export class HomePage {
   nextPage() {
     this.navCtrl.push(Page2Page)
     console.log("oh!");
+  }
+  login(){
+  }
+  submit(){
+
   }
 
 }

@@ -1,45 +1,58 @@
+<ion-header>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="auth">
+      <ion-segment-button value="login">
+        Login
+      </ion-segment-button>
+      <ion-segment-button value="signUp">
+        Sign Up
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
 
-	<ion-toolbar>
-	 <ion-buttons start>
-		 <button ion-button icon-only>
-			 <ion-icon name="create"></ion-icon>
-		 </button>
+<ion-content class="signup_body">
+  <div [ngSwitch]="auth">
+    <div class="logo" ></div>
+    <form (ngSubmit)="logIn()" *ngSwitchDefault>
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+ 	      <ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
 
-	 </ion-buttons>
-	 <ion-segment>
-		 <ion-segment-button value="Login">
-			 Login
-		 </ion-segment-button>
-		 <ion-segment-button value="Sign Up">
-			 Sign Up
-		 </ion-segment-button>
-	 </ion-segment>
-	 <ion-buttons end>
-		 <button ion-button icon-only>
-			 <ion-icon name="more"></ion-icon>
-		 </button>
-	 </ion-buttons>
- </ion-toolbar>
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+ 	      <ion-input type="password" [(ngModel)]="user.pass" name="pass"></ion-input>
+      </ion-item>
 
-<div class="signup_body">
-	<div class="logo" >
-		<!-- <img src="../assets/inovia.png" /> -->
-	</div>
- <ion-list>
+      <div padding>
+        <button ion-button color="primary" block   type="submit">Login</button>
+        <!--<button ion-button color="primary" block *ngSwitchCase="'signUp'" type="submit">Sign Up</button>-->
+      </div>
+    </form>
+    <form (ngSubmit)="signUp()" *ngSwitchCase="'signUp'">
+      <ion-item>
+        <ion-label fixed>Firstname</ion-label>
+ 	      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Surname</ion-label>
+ 	      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+ 	      <ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+ 	      <ion-input type="password" [(ngModel)]="user.pass" name="pass"></ion-input>
+      </ion-item>
 
-	<ion-item>
- 	 <ion-label fixed>Username</ion-label>
- 	 <ion-input type="text" value=""></ion-input>
-  </ion-item>
-
-  <ion-item>
- 	 <ion-label fixed>Password</ion-label>
- 	 <ion-input type="password"></ion-input>
-  </ion-item>
-
- </ion-list>
- <button ion-button>SUBMIT</button>
-
+      <div padding>
+        <button ion-button color="primary" block type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
 
 	<button ion-button (click)="nextPage()">NEXT</button>
-</div>
+</ion-content>

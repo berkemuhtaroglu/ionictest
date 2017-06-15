@@ -1,13 +1,28 @@
 page-home {
   background: url('../assets/bg1.jpg');
   background-size: contain;
+  ion-label.label{
+    color: #fff !important;
+  }
+  .logo{
+  float: left;
+    width: 150px;
+    height: 150px;
+    background: url(../assets/inovia.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+
+}
 }
 ion-content.logo {
   background: url('../assets/inovia.png');
   background-size: contain;
 }
 
-.toolbar-background-ios {
+.toolbar-background{
   background: transparent;
 }
 
@@ -21,14 +36,16 @@ ion-content.logo {
 
 .input{
   background: rgb(153,151,154);
-  color: #fff;
+  color: #fff; 
 }
+
 .item{
   background: rgb(153,151,154);
   color: #fff;
 }
 .logo{
-  float: left;
+  float: center;
+  display:flex;
     width: 150px;
     height: 150px;
     background: url(../assets/inovia.png);
@@ -36,4 +53,6 @@ ion-content.logo {
     background-repeat: no-repeat;
     background-position: center;
     align-self: center;
+    
+
 }
