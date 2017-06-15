@@ -35,11 +35,11 @@
     <form (ngSubmit)="signUp()" *ngSwitchCase="'signUp'">
       <ion-item>
         <ion-label fixed>Firstname</ion-label>
- 	      <ion-input type="text"></ion-input>
+ 	      <ion-input type="text" [(ngModel)]="user.Firstname" name="Firstname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Surname</ion-label>
- 	      <ion-input type="text"></ion-input>
+ 	      <ion-input type="text" [(ngModel)]="user.Surname" name="Surname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Email</ion-label>
