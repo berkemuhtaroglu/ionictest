@@ -1,4 +1,4 @@
-ion-content.background {
+page-home {
   background: url('../assets/bg1.jpg');
   background-size: contain;
 }
@@ -16,7 +16,7 @@ ion-content.logo {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  margin-top: -50px;
+  background: transparent;
 }
 
 .input{
@@ -29,8 +29,8 @@ ion-content.logo {
 }
 .logo{
   float: left;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     background: url(../assets/inovia.png);
     background-size: contain;
     background-repeat: no-repeat;

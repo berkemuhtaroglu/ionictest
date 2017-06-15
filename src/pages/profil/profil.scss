@@ -1,10 +1,12 @@
-page-page2 {
-
-ion-content.background {
+page-profil {
+    ion-content.background {
   background: url('../assets/bg1.jpg');
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.item{
+  background: rgb(153,151,154);
+  color: #fff;
+}
 
 }

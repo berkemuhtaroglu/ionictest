@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { ProfilPage } from '../profil/profil';
 
 @Component({
   selector: 'page-page2',
@@ -16,4 +17,7 @@ export class Page2Page {
     console.log('ionViewDidLoad Page2Page');
   }
 
+ pp() {
+    this.navCtrl.push(ProfilPage)
+  }
 }
