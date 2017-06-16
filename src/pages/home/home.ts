@@ -80,8 +80,10 @@ export class HomePage {
       title: title,
       subTitle: subtitle,
       buttons: ['OK']
+      
     });
     alert.present();
+    this.navCtrl.push(HomePage)
   }
 
 }
