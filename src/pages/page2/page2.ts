@@ -9,6 +9,7 @@ import { ProfilPage } from '../profil/profil';
 })
 
 export class Page2Page {
+
   user: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -20,4 +21,5 @@ export class Page2Page {
         user: this.user
       })
     }
+ 
 }

@@ -73,7 +73,7 @@ export class HomePage {
   }
   
   private onSignInSuccess(data): void {
-    this.navCtrl.setRoot(Page2Page, {
+    this.navCtrl.push(Page2Page, {
       user: data
     })
   }
