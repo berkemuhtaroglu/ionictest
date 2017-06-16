@@ -14,24 +14,20 @@
 <ion-content class="background">
   <ion-card>
   <br>
-  <ion-item>
- 	 <ion-label fixed>Firstname</ion-label>
- 	 <ion-input type="text" value=""></ion-input>
-  </ion-item>
-  <ion-item>
- 	 <ion-label fixed>Surname</ion-label>
- 	 <ion-input type="text" value=""></ion-input>
-  </ion-item>
-<ion-item>
- 	 <ion-label fixed>Email</ion-label>
- 	 <ion-input type="text" value=""></ion-input>
-  </ion-item>
-
-  <ion-item>
- 	 <ion-label fixed>Password</ion-label>
-	  <ion-input type="text" value=""></ion-input>
-	  &nbsp;
- 	 <ion-input type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label fixed>Firstname</ion-label>
+      <ion-input type="text" value="{{ user.firstname }}" [readonly]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Surname</ion-label>
+      <ion-input type="text" value="{{ user.surname }}" [readonly]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+ 	    <ion-label fixed>Email</ion-label>
+ 	    <ion-input type="text" value="{{ user.email }}" [readonly]="true"></ion-input>
+    </ion-item>
+      <div>
+        <button ion-button (click)="add()" color="primary" block type="submit">Update</button>
+      </div>
   </ion-card>
 </ion-content>

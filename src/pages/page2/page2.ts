@@ -9,15 +9,15 @@ import { ProfilPage } from '../profil/profil';
 })
 
 export class Page2Page {
+  user: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = navParams.get('user');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Page2Page');
-  }
-
- pp() {
-    this.navCtrl.push(ProfilPage)
-  }
+  pp() {
+      this.navCtrl.push(ProfilPage,  {
+        user: this.user
+      })
+    }
 }

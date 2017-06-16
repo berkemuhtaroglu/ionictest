@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Update</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="background">
+  <ion-card>
+  <br>
+    <ion-item>
+      <ion-label fixed>Firstname</ion-label>
+      <ion-input type="text" value="{{ user.firstname }}" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Surname</ion-label>
+      <ion-input type="text" value="{{ user.surname }}" ></ion-input>
+    </ion-item>
+    <ion-item>
+ 	    <ion-label fixed>Email</ion-label>
+ 	    <ion-input type="text" value="{{ user.email }}" ></ion-input>
+    </ion-item>
+      <div>
+        <button ion-button (click)="updatedata()" color="primary" block type="submit">Update</button>
+      </div>
+  </ion-card>
+</ion-content>

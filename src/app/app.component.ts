@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Page2Page } from '../pages/page2/page2';
 import { HomePage } from '../pages/home/home';
 import { ProfilPage } from '../pages/profil/profil';
+import { UpdatePage } from '../pages/update/update';
+
 
 @Component({
   templateUrl: 'app.html'

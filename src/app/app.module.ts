@@ -7,13 +7,15 @@ import { Page2Page } from '../pages/page2/page2';
 import { ProfilPage } from '../pages/profil/profil';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { UpdatePage } from '../pages/update/update';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Page2Page,
-    ProfilPage
+    ProfilPage,
+    UpdatePage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     Page2Page,
-    ProfilPage
+    ProfilPage,
+    UpdatePage
   ],
   providers: [
     StatusBar,
