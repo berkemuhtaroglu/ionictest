@@ -36,12 +36,15 @@ export class HomePage {
     const { email, pass } = this.user;
 
     const promise = auth.signInWithEmailAndPassword(email, pass);
-
+    
     promise.catch((e:any) => {
-      if(e.code === "auth/user-not-found") {
-        this.onNoAccount('Account not found', `You don't have an account, please sign up`)
-      }
-    })
+
+      this.onNoAccount(e.code, e.message)
+})
+       promise.then(() => {
+      this.onSignInSuccess(this.user);
+     })
+     
   }
 
   signUp(): void {
@@ -59,8 +62,8 @@ export class HomePage {
     })
     promise.catch((e:any) => {
       if(e.code === "auth/weak-password") {
-        this.onNoAccount('weak-password', 'Password should be at least 6 characters')
-      }
+        this.onNoAccount('weak-password', 'Password should be at least 6 characters')    
+        }
     })
   }
   
@@ -69,12 +72,14 @@ export class HomePage {
       user: data
     })
   }
+
+
   
   private onNoAccount(title, subtitle) {
     let alert = this.alertCtrl.create({
       title: title,
       subTitle: subtitle,
-      buttons: ['Dismiss']
+      buttons: ['OK']
     });
     alert.present();
   }

@@ -10,6 +10,7 @@ page-home {
     align-items: center;
     margin-top: -5px;
 }
+
 }
   }
   .logo{
@@ -46,8 +47,9 @@ ion-content.logo {
 }
 
 .input{
-  background: rgb(153,151,154);
+  background: rgba(0,0,0,.0);
   color: #fff; 
+  font-family: "Times New Roman"
 }
 .wrap{
     display: flex;
@@ -55,13 +57,16 @@ ion-content.logo {
 }
 ion-card{
   background: rgba(0,0,0,.5) !important;
-  
+  border-radius: 10px !important;
 }
 
 .item{
-  background: rgb(153,151,154);
+  background: rgba(0,0,0,.6);
   color: #fff;
   margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: "Times New Roman"
+  
 }
 
 .logo{
