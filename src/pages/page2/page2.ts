@@ -11,14 +11,17 @@ import { ProfilPage } from '../profil/profil';
 export class Page2Page {
 
   user: any;
+  uid: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = navParams.get('user');
+    this.uid = navParams.get('uid');
   }
 
   pp() {
       this.navCtrl.push(ProfilPage,  {
-        user: this.user
+        user: this.user,
+        uid: this.uid
       })
     }
  

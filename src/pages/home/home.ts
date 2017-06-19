@@ -24,9 +24,10 @@ export class HomePage {
     private alertCtrl: AlertController) {
     auth.onAuthStateChanged((user) => {
       if(user) {
+        this.currentUser = user.uid
         // if there is a user , its sets current user to user id
         db.ref(`users/${user.uid}`).once('value').then((snapshot) => {
-          this.onSignInSuccess(snapshot.val());
+          this.onSignInSuccess(snapshot.val(), this.currentUser);
         })
       } else {
         console.log('not logged in');
@@ -46,7 +47,7 @@ export class HomePage {
 
     promise.then((user) => {
       db.ref(`users/${user.uid}`).once('value').then((snapshot) => {
-        this.onSignInSuccess(snapshot.val());
+        this.onSignInSuccess(snapshot.val(), this.currentUser);
       })
      })
      
@@ -62,7 +63,7 @@ export class HomePage {
         firstname: Firstname,
         surname: Surname,
       }).then(() => {
-        this.onSignInSuccess(this.user);
+        this.onSignInSuccess(this.user, this.currentUser);
       })
     })
     promise.catch((e:any) => {
@@ -72,9 +73,10 @@ export class HomePage {
     })
   }
   
-  private onSignInSuccess(data): void {
+  private onSignInSuccess(data, uid): void {
     this.navCtrl.setRoot(Page2Page, {
-      user: data
+      user: data,
+      uid: uid
     })
   }
 

@@ -10,11 +10,11 @@
   <br>
     <ion-item>
       <ion-label fixed>Firstname</ion-label>
-      <ion-input type="text" value="{{ user.firstname }}" ></ion-input>
+      <ion-input type="text" value="{{ user.firstname }}" [(ngModel)]="user.firstname" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label fixed>Surname</ion-label>
-      <ion-input type="text" value="{{ user.surname }}" ></ion-input>
+      <ion-input type="text" value="{{ user.surname }}" [(ngModel)]="user.surname"></ion-input>
     </ion-item>
     <ion-item>
  	    <ion-label fixed>Email</ion-label>

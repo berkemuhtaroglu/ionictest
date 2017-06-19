@@ -17,15 +17,18 @@ export class ProfilPage {
 
   user: any;
   inputFlag = true;
+  uid: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = navParams.get('user');
+    this.uid = navParams.get('uid');
   }
 
 
   add() {
      this.navCtrl.push(UpdatePage,  {
-        user: this.user
+        user: this.user,
+        uid: this.uid
       })
   }
 
