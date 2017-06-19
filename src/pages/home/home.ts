@@ -56,8 +56,8 @@ export class HomePage {
     const {email, pass, Firstname, Surname } = this.user
 
     const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.then(() => {
-      db.ref(`users/${this.currentUser}`).set({
+    promise.then((user) => {
+      db.ref(`users/${user.uid}`).set({
         email: email,
         firstname: Firstname,
         surname: Surname,
@@ -73,7 +73,7 @@ export class HomePage {
   }
   
   private onSignInSuccess(data): void {
-    this.navCtrl.push(Page2Page, {
+    this.navCtrl.setRoot(Page2Page, {
       user: data
     })
   }
