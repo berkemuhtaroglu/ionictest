@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ProfilPage } from '../profil/profil';
-
+import { AddstudentPage } from '../addstudent/addstudent';
+import { SeestudentPage } from '../seestudent/seestudent';
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html',
@@ -24,5 +25,11 @@ export class Page2Page {
         uid: this.uid
       })
     }
- 
+  add(){
+    this.navCtrl.push(AddstudentPage)
+  }
+  see(){
+    this.navCtrl.push(SeestudentPage)
+
+  }
 }

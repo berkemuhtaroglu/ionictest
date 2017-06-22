@@ -8,14 +8,19 @@ import { ProfilPage } from '../pages/profil/profil';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UpdatePage } from '../pages/update/update';
-
+import { AddstudentPage } from '../pages/addstudent/addstudent';
+import { SeestudentPage } from '../pages/seestudent/seestudent';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Page2Page,
     ProfilPage,
-    UpdatePage
+    UpdatePage,
+    AddstudentPage,
+    SeestudentPage
+      
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { UpdatePage } from '../pages/update/update';
     HomePage,
     Page2Page,
     ProfilPage,
-    UpdatePage
+    UpdatePage,
+    AddstudentPage,
+    SeestudentPage
   ],
   providers: [
     StatusBar,

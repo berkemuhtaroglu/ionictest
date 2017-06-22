@@ -6,6 +6,9 @@ import { Page2Page } from '../pages/page2/page2';
 import { HomePage } from '../pages/home/home';
 import { ProfilPage } from '../pages/profil/profil';
 import { UpdatePage } from '../pages/update/update';
+import { AddstudentPage } from '../pages/addstudent/addstudent';
+import { SeestudentPage } from '../pages/seestudent/seestudent';
+
 
 
 @Component({

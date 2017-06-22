@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add student</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+
+<br>
+<form (ngSubmit)="createStudent()">
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input type="text" [(ngModel)]="student.firstname" name="firstname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input type="text" [(ngModel)]="student.surname" name="surname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Tel No</ion-label>
+    <ion-input type="text" [(ngModel)]="student.tel_no" name="tel_no"></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label floating>Father Name</ion-label>
+    <ion-input type="text" [(ngModel)]="student.fathername" name="fathername"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="student.email" name="email"></ion-input>
+  </ion-item>    
+
+  <ion-item>
+  &nbsp;<ion-label floating>Birth Date</ion-label><br>
+  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="student.birthday" name="birthday"></ion-datetime><br>
+  </ion-item>
+
+  &nbsp;&nbsp;&nbsp;<button ion-button full type="submit">Add Student</button>
+</form>
+
+</ion-content>
