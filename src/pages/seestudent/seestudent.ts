@@ -48,11 +48,12 @@ export class SeestudentPage {
     // if the value is an empty string don't filter the items
     if (val && val.trim() !== '') {
       const filter = this.students.filter(student => {
-        return student.firstname.toLowerCase().indexOf(val.toLowerCase()) > -1
+        return student.firstname.toLowerCase().indexOf(val.toLowerCase())> -1
       });
       this.students = filter;
       console.log(this.students)
     }
+    return this.students;
   }
 }
 
